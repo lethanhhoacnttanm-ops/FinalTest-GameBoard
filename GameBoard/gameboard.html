@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Board Puzzle</title>
+    <link rel="stylesheet" href="gameboard.css">
+</head>
+<body>
+
+    <div class="main-containAllscreen-gameboard">
+        <div class="container-screen-gameboard">
+            <!-- header -->
+            <div class="header-screen-gameboard">
+                <div class="gameboard__btn-playgame">
+                    <button onclick="startGame()">PLAY</button>
+                </div>
+
+                <div class="gameboard__show-time" id="timer">
+                    Time : 0s
+                </div>
+            </div>
+
+            <!-- section - body -->
+            <div class="section-screen-gameboard">
+                <div class="gameboard__screen-gameplay" id="gameboard">
+
+                </div>
+
+                <div class="gameboard__btn-navigation">
+                    <button class="up" onclick="moveByButton('up')">UP</button>
+                    <div class="btn-navigation__body">
+                        <button class="left" onclick="moveByButton('left')">LEFT</button>
+                        <button class="right" onclick="moveByButton('right')">RIGHT</button>
+                    </div>
+                    <button class="down" onclick="moveByButton('down')">DOWN</button>
+                </div>
+            </div>
+
+            <!-- footer -->
+             <div class="footer-screen-gameboard">
+                <div class="gameboard__title-history">
+                    <h2>History game play</h2>
+                </div>
+
+                <div class="gameboard__history-storage">
+
+                    <table  id="history-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Your step</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="history-body">
+                            
+                        </tbody>
+                    </table>
+                </div>
+             </div>
+        </div>
+    </div>
+    <script src="./gameboard.js"></script>
+</body>
+</html>
